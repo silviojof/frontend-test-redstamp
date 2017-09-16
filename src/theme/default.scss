@@ -1,0 +1,135 @@
+// -- VARIABLES
+
+// -- Colors
+$c-primary: #ec5447; //magenta
+$c-primary-lighter: #d9514b;
+$c-secondary: #60cbe2; //bue
+$c-secondary-dark: #0a273c;
+$g-lighter: #eceef0;
+$g-light: #f7f8f9;
+$g-mid-light: #d8d8d8;
+$g-mid: #85939e;
+$g-dark: #2f363b;
+$g-darker: #0a273c;
+$white: #fff;
+
+// -- Font weights
+$font-weight-base: 300;
+$font-weight-bold: 500;
+$font-weight-bolder: 600;
+
+// - Font sizes
+$font-size-large: 16px;
+$font-size-base: 14px;
+$font-size-small: 12px;
+$font-size-xsmall: 10px;
+$font-size-headline-primary: 30px;
+$font-size-headline-primary-large: 44px;
+$font-size-headline-component: 25px;
+$font-size-headline-component-large: 35px;
+
+// -- Paths
+//  considering that the entry point is styles.scss
+$path-theme-dir: 'theme';
+
+// -- horizontal rhytm
+$horizontal-rythm-spacing-text: 10px;
+
+// -- vertical rhytm
+$vertical-rythm-spacing-component: 30px;
+$vertical-rythm-spacing-text: 10px;
+
+// -- page
+$page-max-width: 600px;
+
+// --line height
+$line-height-factor-base: 1.36;
+
+// -- fonts
+
+@font-face {
+    font-family: TiemposText;
+    src: url('#{$path-theme-dir}/fonts/TiemposText-Regular.otf') format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: TiemposHeadline;
+    src: url('#{$path-theme-dir}/fonts/TiemposHeadline-Regular.otf') format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: AlrightSansLT;
+    src: url('#{$path-theme-dir}/fonts/AlrightSans-Thin.otf') format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: AlrightSansLT;
+    src: url('#{$path-theme-dir}/fonts/AlrightSans-Medium.otf') format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: AlrightSansLT;
+    src: url('#{$path-theme-dir}/fonts/AlrightSans-Bold.otf') format("opentype");
+    font-weight: 500;
+}
+
+// -- MIXINS
+
+@mixin bold-link-appearance {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: $font-size-xsmall;
+  color: $c-secondary;
+  text-transform: uppercase;
+
+  &:hover {
+    color: darken($c-secondary, 20%);
+  }
+}
+
+// -- Styles
+
+// Universal Box Sizing with Inheritance
+// https://css-tricks.com/box-sizing/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  min-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+}
+
+body,
+html {
+  font-family: 'AlrightSansLT', Helvetica, Arial, sans-serif;
+  line-height: $line-height-factor-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: block;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  max-width: $page-max-width;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $g-light;
+  border: 1px solid $g-lighter;
+}

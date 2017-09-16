@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@import 'node_modules/foundation-sites/scss/foundation.scss';
+@import 'theme/settings-foundation.scss';
+
+@include foundation-grid;
+@include foundation-visibility-classes;
+
+@import 'theme/default';
+@import 'components/page';
+@import 'components/header';
+@import 'components/main';
+@import 'components/tips';
+@import 'components/blog-card';
+@import 'components/footer';

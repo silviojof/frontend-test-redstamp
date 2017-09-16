@@ -1,0 +1,43 @@
+.card {
+  background-color: $white;
+  border: solid 1px $g-lighter;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 20px;
+
+  img {
+    position: absolute;
+    left: 25px;
+  }
+
+  &--body {
+    margin-left: 100px;
+
+    h4,
+    p {
+      margin: 0;
+    }
+
+    h4 {
+      font-size: $font-size-large;
+      color: $g-darker;
+      margin: 0 0 7px;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      color: $g-mid;
+      font-size: $font-size-small;
+      margin: 0 0 4px;
+    }
+
+    a {
+      @include bold-link-appearance;
+    }
+  }
+}
+
+.cards-box {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $g-lighter;
+}

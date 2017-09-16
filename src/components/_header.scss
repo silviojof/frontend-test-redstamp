@@ -1,0 +1,63 @@
+.header-container {
+  padding-top: $vertical-rythm-spacing-text;
+  background-color: $white;
+  padding-bottom: 50px;
+}
+
+.header-top {
+  margin-bottom: $vertical-rythm-spacing-component;
+
+  &--title {
+    float: left;
+  }
+
+  img {
+    max-width: 140px;
+    float: left;
+  }
+
+  &--view {
+    color: $c-primary;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    font-size: 10px;
+    line-height: 4;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: lighten($c-primary, 20%);
+    }
+  }
+}
+
+.header-content {
+  div:first-child {
+    padding-right: 5px;
+  }
+
+  h1 {
+    font-size: $font-size-headline-primary;
+    font-family: 'TiemposText', serif;
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: -0.4px;
+    text-align: left;
+    color: $c-secondary-dark;
+    margin-bottom: 0;
+
+    @media screen and (min-width: 450px) {
+      font-size: $font-size-headline-primary-large;
+    }
+  }
+
+  p {
+    color: $g-mid;
+    line-height: 1.21;
+  }
+
+  img {
+    width: 100%;
+    padding-left: 20px;
+  }
+}

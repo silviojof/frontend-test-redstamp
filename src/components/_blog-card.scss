@@ -1,0 +1,54 @@
+.blog-image img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-card {
+  article {
+    background-color: $white;
+    border: solid 1px $g-lighter;
+    margin-bottom: 20px;
+  }
+
+  &--image {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &--body {
+    padding: 15px;
+
+    a {
+      @include bold-link-appearance;
+    }
+
+    h6 {
+      margin: 0;
+      font-family: 'TiemposHeadline', Georgia, serif;
+      font-size: $font-size-large;
+      color: $c-secondary-dark;
+    }
+
+    p {
+      color: $g-darker;
+      font-size: $font-size-small;
+      opacity: 0.73;
+      line-height: 1.5;
+    }
+  }
+
+  &:first-child {
+    @media screen and (min-width: 450px) {
+      padding-right: 10px;
+    }
+  }
+
+  &:last-child {
+    @media screen and (min-width: 450px) {
+      padding-left: 10px;
+    }
+  }
+}
