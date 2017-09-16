@@ -6,7 +6,7 @@
     "private": true,
     "scripts": {
         "postinstall": "npm run build",
-        "build": "npm-run-all lint css",
+        "build": "npm-run-all css",
         "css": "npm-run-all css:precompile css:autoprefix",
         "css:autoprefix": "postcss --use autoprefixer --replace src/styles.css",
         "css:precompile": "node-sass --output-style expanded --output src src/styles.scss",
